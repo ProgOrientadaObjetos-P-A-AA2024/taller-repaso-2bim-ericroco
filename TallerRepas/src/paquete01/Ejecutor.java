@@ -6,6 +6,7 @@ package paquete01;
 
 import paquete02.*;
 import paquete03.*;
+import paquete04.*;
 import java.util.*;
 
 /**
@@ -45,8 +46,11 @@ public class Ejecutor {
         
         for (int i = 0; i < lista.size(); i++) {
             lista.get(i).establecerPrecioFinal();
-            System.out.println(lista.get(i));
         }
+        Consecionaria conse = new Consecionaria(lista,"Daniel");
+        conse.establecerVentasTotales();
+        conse.establecerCostoMenor();
+        System.out.println(conse);
     }
 
 }
